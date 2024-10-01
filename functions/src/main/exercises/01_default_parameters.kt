@@ -1,3 +1,5 @@
+import java.util.Locale
+
 fun sayHello(): String {
     return sayHello("World")
 }
@@ -7,7 +9,7 @@ fun sayHello(name: String): String {
 }
 
 fun sayHelloTwice(first: String): String {
-    return sayHelloTwice(first, first.toUpperCase())
+    return sayHelloTwice(first, first.uppercase(Locale.getDefault()))
 }
 
 fun sayHelloTwice(first: String, second: String): String {

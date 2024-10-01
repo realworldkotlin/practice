@@ -1,15 +1,16 @@
-
-import org.junit.After
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 import java.io.File
 
 class FileContentsTest {
 
     @Test
     fun `reads and returns contents of existing file`() {
-        assertEquals(listOf("alice.txt:Alice was ", "curious.txt:‘What a cu"),
-            FileContents().contentsOf(file("alice.txt") + "," + file("curious.txt")))
+        assertEquals(
+            listOf("alice.txt:Alice was ", "curious.txt:‘What a cu"),
+            FileContents().contentsOf(file("alice.txt") + "," + file("curious.txt"))
+        )
     }
 
     @Test
@@ -22,7 +23,7 @@ class FileContentsTest {
         assertEquals(listOf("rabbit.txt:<empty fil"), FileContents().contentsOf("rabbit.txt"))
     }
 
-    @After
+    @AfterEach
     fun cleanup() {
         File(".").listFiles().filter { it.name.endsWith(".txt") }.forEach { it.delete() }
     }

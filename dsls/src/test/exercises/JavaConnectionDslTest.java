@@ -1,5 +1,8 @@
-import database.*;
-import org.junit.Test;
+import database.Credentials;
+import database.Database;
+import database.DatabaseConnection;
+import database.Port;
+import org.junit.jupiter.api.Test;
 
 import java.net.InetAddress;
 import java.nio.charset.Charset;

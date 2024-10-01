@@ -1,20 +1,14 @@
 package question;
 
+import library.*;
+import org.junit.jupiter.api.Test;
+
 import java.time.Clock;
 import java.time.Instant;
 import java.time.Period;
 import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Collections;
-import library.Author;
-import library.Authors;
-import library.Book;
-import library.Catalogue;
-import library.Loan;
-import library.Loans;
-import library.Member;
-import library.Members;
-import org.junit.Test;
 
 import static java.util.Collections.singletonList;
 import static org.junit.Assert.assertEquals;
